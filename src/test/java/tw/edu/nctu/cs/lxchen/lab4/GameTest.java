@@ -10,6 +10,20 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Part 2 - Write a rock-paper-scissors game unit test
+ *
+ * a. all win cases: {@link #testGetResult(String, String, Game.GameResult)}
+ * b. all lose cases: {@link #testGetResult(String, String, Game.GameResult)}
+ * c. all draw cased: {@link #testGetResult(String, String, Game.GameResult)}
+ * d. valid / invalid input cases:
+ *      {@link #testGetResultException()}
+ *      {@link #testCheckingInput()}
+ *      {@link #testGetResultValid()}
+ *      {@link #testCheckingInputValid()}
+ *
+ * @author Li-Xian Chen (309552020) @ NYCU
+ * */
 class GameTest {
     private static Stream<Arguments> getCases() {
         return Stream.of(
