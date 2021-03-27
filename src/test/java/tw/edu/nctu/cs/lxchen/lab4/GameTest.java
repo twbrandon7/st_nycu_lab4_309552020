@@ -43,7 +43,7 @@ class GameTest {
     }
 
     /**
-     * Check if Game.result() throws correct exception when receiving invalid value.
+     * Check if Game.result() throws correct exception when receive invalid value.
      * This method is used to fulfill requirement of (d) part 2.
      * */
     @Test
@@ -55,7 +55,7 @@ class GameTest {
     }
 
     /**
-     * Check if Game.checkingInput() throws correct exception when receiving invalid value.
+     * Check if Game.checkingInput() throws exception when receive invalid value.
      * This method is used to fulfill requirement of (d) part 2.
      * */
     @Test
@@ -64,5 +64,35 @@ class GameTest {
             Game.checkingInput("ABC");
         });
         assertEquals("Invalid input value!", exception.getMessage());
+    }
+
+    /**
+     * Check if Game.getResult() doesn't throw exception when receive valid value.
+     * This method is used to fulfill requirement of (d) part 2.
+     * */
+    @Test
+    void testGetResultValid() {
+        String[] choices = {Game.INPUT_PAPER, Game.INPUT_ROCK, Game.INPUT_SCISSORS};
+        for (String player1Input : choices) {
+            for (String player2Input : choices) {
+                assertDoesNotThrow(()->{
+                    Game.getResult(player1Input, player2Input);
+                });
+            }
+        }
+    }
+
+    /**
+     * Check whether Game.checkingInput() will not raise an exception when it receives a valid value.
+     * This method is used to fulfill requirement of (d) part 2.
+     * */
+    @Test
+    void testCheckingInputValid() {
+        String[] choices = {Game.INPUT_PAPER, Game.INPUT_ROCK, Game.INPUT_SCISSORS};
+        for (String input : choices) {
+            assertDoesNotThrow(()->{
+                Game.checkingInput(input);
+            });
+        }
     }
 }
