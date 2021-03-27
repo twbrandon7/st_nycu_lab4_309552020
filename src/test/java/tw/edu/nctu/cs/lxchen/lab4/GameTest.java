@@ -67,7 +67,7 @@ class GameTest {
         Exception exception = assertThrows(IllegalArgumentException.class, ()->{
             Game.getResult("ABC", "DEF");
         });
-        assertEquals("Invalid input value!", exception.getMessage());
+        assertEquals("Invalid input value!!", exception.getMessage());
     }
 
     /**
