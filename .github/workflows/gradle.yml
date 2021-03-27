@@ -68,10 +68,16 @@ jobs:
         run: chmod +x gradlew
 
       - name: Test with Gradle
+        id: gradle_test
         run: ./gradlew test
+        continue-on-error: true
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: test-report-artifact
           path: ./build/test-results/
+
+      - name: Check on failures
+        if: steps.gradle_test.outcome != 'success'
+        run: exit 1
