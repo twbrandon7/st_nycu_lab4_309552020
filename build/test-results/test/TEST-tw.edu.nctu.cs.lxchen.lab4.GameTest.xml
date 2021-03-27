@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tw.edu.nctu.cs.lxchen.lab4.GameTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2021-03-27T10:02:53" hostname="DESKTOP-NO0J3E4" time="0.077">
+  <properties/>
+  <testcase name="testGetResultException()" classname="tw.edu.nctu.cs.lxchen.lab4.GameTest" time="0.012"/>
+  <testcase name="testCheckingInput()" classname="tw.edu.nctu.cs.lxchen.lab4.GameTest" time="0.001"/>
+  <testcase name="[1] paper, rock, PLAYER_1_WIN" classname="tw.edu.nctu.cs.lxchen.lab4.GameTest" time="0.016"/>
+  <testcase name="[2] scissors, paper, PLAYER_1_WIN" classname="tw.edu.nctu.cs.lxchen.lab4.GameTest" time="0.0"/>
+  <testcase name="[3] rock, scissors, PLAYER_1_WIN" classname="tw.edu.nctu.cs.lxchen.lab4.GameTest" time="0.001"/>
+  <testcase name="[4] rock, paper, PLAYER_2_WIN" classname="tw.edu.nctu.cs.lxchen.lab4.GameTest" time="0.001"/>
+  <testcase name="[5] paper, scissors, PLAYER_2_WIN" classname="tw.edu.nctu.cs.lxchen.lab4.GameTest" time="0.001"/>
+  <testcase name="[6] scissors, rock, PLAYER_2_WIN" classname="tw.edu.nctu.cs.lxchen.lab4.GameTest" time="0.002"/>
+  <testcase name="[7] paper, paper, DRAW" classname="tw.edu.nctu.cs.lxchen.lab4.GameTest" time="0.001"/>
+  <testcase name="[8] scissors, scissors, DRAW" classname="tw.edu.nctu.cs.lxchen.lab4.GameTest" time="0.0"/>
+  <testcase name="[9] rock, rock, DRAW" classname="tw.edu.nctu.cs.lxchen.lab4.GameTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
