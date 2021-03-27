@@ -13,7 +13,9 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Part 2 - Write a rock-paper-scissors game unit test
  *
- * a. all win cases: {@link #testGetResult(String, String, Game.GameResult)}
+ * a. all win cases:
+ *      {@link #getCases()}
+ *      {@link #testGetResult(String, String, Game.GameResult)}
  * b. all lose cases: {@link #testGetResult(String, String, Game.GameResult)}
  * c. all draw cased: {@link #testGetResult(String, String, Game.GameResult)}
  * d. valid / invalid input cases:
