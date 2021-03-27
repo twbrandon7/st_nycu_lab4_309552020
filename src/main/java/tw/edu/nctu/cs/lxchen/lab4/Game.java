@@ -1,5 +1,11 @@
 package tw.edu.nctu.cs.lxchen.lab4;
 
+/**
+ * Performing the game logic.
+ * This class is used to fulfill requirement 2 of part 1.
+ *
+ * @author Li-Xian Chen (309552020) @ NYCU
+ * */
 public class Game {
 
     static final String INPUT_PAPER = "paper";
@@ -12,6 +18,14 @@ public class Game {
         DRAW
     }
 
+    /**
+     * Determine which player win.
+     * This function is used to fulfill requirement (b.i) of part 1.
+     *
+     * @param player1Input the input value of player 1.
+     * @param player2Input the input value of player 2.
+     * @return the result of the game
+     * */
     public static GameResult getResult(String player1Input, String player2Input) {
         checkingInput(player1Input);
         checkingInput(player2Input);
@@ -48,6 +62,13 @@ public class Game {
         throw new IllegalArgumentException("Invalid input value!");
     }
 
+    /**
+     * Checking if the input is valid.
+     * This function is used to fulfill requirement (b.ii) of part 1.
+     *
+     * @param input the input value of the player
+     * @throws IllegalArgumentException The exception throws when the input value is invalid.
+     * */
     public static void checkingInput(String input) {
         if (!input.equals(INPUT_PAPER) && !input.equals(INPUT_ROCK) && !input.equals(INPUT_SCISSORS)) {
             throw new IllegalArgumentException("Invalid input value!");

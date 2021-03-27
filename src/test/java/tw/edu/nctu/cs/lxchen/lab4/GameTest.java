@@ -34,7 +34,7 @@ class GameTest {
 
     /**
      * Test the return value of Game.getResult()
-     * This method is used to fulfill the requirement (a) (b) (c) of part 2.
+     * This method is used to fulfill requirement (a) (b) (c) of part 2.
      * */
     @ParameterizedTest
     @MethodSource("getCases")
@@ -44,7 +44,7 @@ class GameTest {
 
     /**
      * Check if Game.result() throws correct exception when receiving invalid value.
-     * This method is used to fulfill the requirement of (d) part 2.
+     * This method is used to fulfill requirement of (d) part 2.
      * */
     @Test
     void testGetResultException() {
@@ -56,7 +56,7 @@ class GameTest {
 
     /**
      * Check if Game.checkingInput() throws correct exception when receiving invalid value.
-     * This method is used to fulfill the requirement of (d) part 2.
+     * This method is used to fulfill requirement of (d) part 2.
      * */
     @Test
     void testCheckingInput() {
