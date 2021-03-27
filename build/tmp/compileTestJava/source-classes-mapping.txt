@@ -1,2 +1,0 @@
-tw/edu/nctu/cs/lxchen/lab4/GameTest.java
- tw.edu.nctu.cs.lxchen.lab4.GameTest
