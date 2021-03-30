@@ -39,7 +39,7 @@ jobs:
 
       - name: Build with Gradle
         # build only, no test
-        run: ./gradlew build -x test -x jar
+        run: ./gradlew build -x test -x jar --info --build-cache
 
   test:
     name: Test
@@ -71,7 +71,7 @@ jobs:
 
       - name: Test with Gradle
         id: gradle_test
-        run: ./gradlew test
+        run: ./gradlew test --info
         continue-on-error: true
 
       - name: Upload artifact
@@ -113,7 +113,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Assemble jar file
-        run: ./gradlew jar
+        run: ./gradlew jar --info
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
