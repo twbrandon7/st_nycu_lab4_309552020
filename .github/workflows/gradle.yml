@@ -117,3 +117,27 @@ jobs:
         with:
           name: jar-artifact
           path: ./build/libs/
+
+  publish:
+    needs: assemble
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout code
+      - uses: actions/checkout@v2
+
+      - name: Add a directory for artifacts
+        run: mkdir -p ~/artifacts
+
+      - name: Download jar file
+        uses: actions/download-artifact@v2
+        with:
+          name: my-artifact
+          path: ~/artifacts
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ~/artifacts/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
