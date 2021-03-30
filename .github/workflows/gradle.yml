@@ -139,9 +139,13 @@ jobs:
           name: jar-artifact
           path: ~/artifacts
 
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: ~/artifacts
+
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: ~/artifacts/*
+          files: "~/artifacts/*"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
