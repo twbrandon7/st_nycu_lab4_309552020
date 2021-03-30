@@ -140,8 +140,7 @@ jobs:
           path: ~/artifacts
 
       - name: Display structure of downloaded files
-        run: ls -R
-        working-directory: ~/artifacts
+        run: ls -R ~/artifacts
 
       - name: Release
         uses: softprops/action-gh-release@v1
